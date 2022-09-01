@@ -1,0 +1,5 @@
+roslaunch gazebo_radiation_plugins radiation_demonstrator_testing.launch
+rosrun navigation_test display_locations.py
+rosrun navigation_test pub_current_pose.py 
+rosrun navigation_test gwendolen_to_ros_movebase_client.py
+

@@ -30,7 +30,7 @@ class movebase_client:
         goal.target_pose.pose.orientation.w = 1.0
 
         client.send_goal(goal,done_cb)
-        rospy.loginfo("Goal sent")
+        rospy.loginfo("Goal sent - Location ({0},{1},{2})".format(x,y,z))
         return client
     
     def cancel_goal(self):
