@@ -1,15 +1,12 @@
 #!/usr/bin/env python
 # displaying all locations
 
-import sys
-import getpass
-current_user = getpass.getuser()
-pointlib_path = "/home/{0}/work/code/ros/ros1/rad_ws/shared_python".format(current_user)
-sys.path.insert(0,pointlib_path)
-from Point import CPoint
-from Point import LOCATIONS
+
+
 
 import rospy
+from shared_python_code.Point import CPoint 
+from shared_python_code.Point import LOCATIONS
 from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
 
