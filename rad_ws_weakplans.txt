@@ -3,3 +3,6 @@ rosrun navigation_test display_locations.py
 rosrun navigation_test pub_current_pose.py 
 rosrun navigation_test gwendolen_to_ros_movebase_client.py
 
+
+the gwendolen program is 
+plan_and_stop_near 
