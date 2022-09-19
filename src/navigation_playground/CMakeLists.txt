@@ -160,11 +160,11 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
  catkin_install_python(PROGRAMS
-   scripts/send_nav_goals.py
+   scripts/gwendolen_to_ros_movebase_client.py
    scripts/get_nav_goals.py
    scripts/pub_current_pose.py
-   scripts/simple_visit.py
    scripts/display_locations.py
+   scripts/monitor_resources.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 
