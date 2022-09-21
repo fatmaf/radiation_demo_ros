@@ -128,7 +128,7 @@ class SimpleVisit():
 if __name__ == '__main__':
 
     try:
-        locs = ['entrance','bigtankfront','tank1top','pipes']
+        locs = ['entrance','pipes']
         simple_visit = SimpleVisit()
         simple_visit.start(locs)
 

@@ -1,0 +1,9 @@
+
+<launch>
+        
+<node pkg="monitor_radtest" type="radiation_monitor_req.py" name="radiation_monitor_req" output="screen"/>
+            
+<node pkg="monitor_radtest" type="radiation_monitor_pref.py" name="radiation_monitor_pref" output="screen"/>
+            
+</launch>
+        
