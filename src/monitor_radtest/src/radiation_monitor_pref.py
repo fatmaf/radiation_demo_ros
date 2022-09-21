@@ -96,7 +96,7 @@ def logging(json_dict):
 
 def main(argv):
 	global log, actions, ws
-	log = '/home/fatma/work/code/ros/ros1/rad_ws/monitor_resources_pref_log.txt' 
+	log = '/home/robotlab/code/ros/radiation_demo_ros/monitor_resources_pref_log.txt' 
 	actions = {
 		'radiation_status' : ('filter', 1)
 	}
