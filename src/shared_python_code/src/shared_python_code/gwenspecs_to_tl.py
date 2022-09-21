@@ -14,7 +14,7 @@ def translate_visit(op):
     return ("(F {0})".format(op))
 
 def combine(reqs):
-    return ' & '.join(reqs)
+    return ' AND '.join(reqs)
 
 def bracket(op):
     return ("({0})".format(op))
@@ -66,8 +66,8 @@ def gwen_spec_extraction(gwenspec):
 
 def do_gwen_specs():
     specs1 = ["specification(\"Required\",[visit(pipes)])","specification(\"Preferred\",[avoid(danger_orange)])"]
-    specs2 = ["specification(\"Required\",[visit(iP1),visit(t2bottom),visit(tankset),visit(pipes)])", "specification(\"Preferred\",[avoid(danger_red),before(iP1,t2bottom),before(iP1,tankset),before(iP1,pipes),before(t2bottom,pipes),before(tankset,pipes),before(t2bottom,tankset)])"]
-    specs3 = ["specification(\"Required\",[visit(iP1),visit(t2bottom),visit(tankset),visit(pipes)])", "specification(\"Preferred\",[avoid(t2left),before(iP1,t2bottom),before(iP1,tankset),before(iP1,pipes),before(t2bottom,pipes),before(tankset,pipes),before(t2bottom,tankset)])"]
+    specs2 = ["specification(\"Required\",[visit(ipone),visit(t2bottom),visit(tankset),visit(pipes)])", "specification(\"Preferred\",[avoid(danger_red),before(ipone,t2bottom),before(ipone,tankset),before(ipone,pipes),before(t2bottom,pipes),before(tankset,pipes),before(t2bottom,tankset)])"]
+    specs3 = ["specification(\"Required\",[visit(ipone),visit(t2bottom),visit(tankset),visit(pipes)])", "specification(\"Preferred\",[avoid(t2left),before(ipone,t2bottom),before(ipone,tankset),before(ipone,pipes),before(t2bottom,pipes),before(tankset,pipes),before(t2bottom,tankset)])"]
     specs = [specs1,specs2,specs3]
     for spec in specs:
         print("==============================================================")
