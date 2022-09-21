@@ -59,7 +59,9 @@ LOCATIONS = {'Door':CPoint(-8.18,-3.16,0.0,0.0,1.0),
              #'TankSet West': CPoint(1.98,-7.88,0.0),
             'Pipes': CPoint(7.79,-2.67,0.0,0.0,1.0),
              'Drum Room': CPoint(1.30,2.20,0.0,0.0,1.0),
-             'Ghost Point': CPoint(0.48, 5.13, 0.0,0.0,1.0)
+
+
+             'Ghost Point': CPoint(0.45, 3.63, 0.0,0.0,1.0)
           
              #'Entrance':CPoint(-7.825369834899902, -0.5725803375244141, 0.02588939666748047)
              }
