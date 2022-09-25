@@ -52,7 +52,7 @@ class MonitorSub:
         z = data.pose.pose.position.z
         self.at_pred = self.predicateGenerator.getAt(x,y)
         self.near_preds = self.predicateGenerator.getNear(x,y)
-        print(self.near_preds)
+        #print(self.near_preds)
         
     def run(self):
         while not rospy.is_shutdown():

@@ -19,9 +19,9 @@ class GenerateAtNear(object):
     def distanceFromLocBetween(self, distance, upperBound, lowerBound):
         
         if(distance < upperBound):
-            print("{0} < {1}".format(distance,upperBound))
+            #print("{0} < {1}".format(distance,upperBound))
             if(distance >= lowerBound):
-                print("{0} >= {1}".format(distance,lowerBound))
+                #print("{0} >= {1}".format(distance,lowerBound))
                 return True 
         return False         
  
@@ -67,10 +67,10 @@ class GenerateAtNear(object):
         self.checkSetCurrentXY(cx, cy)
         for loc in LOCATIONS:
             distance = self.distance_dictionary[loc]
-            print("debug near locs -> {3} {0}, lb {1}, ub {2}".format(distance,self.near_ep,self.at_ep,loc))
+            #print("debug near locs -> {3} {0}, lb {1}, ub {2}".format(distance,self.near_ep,self.at_ep,loc))
             if self.distanceFromLocBetween(distance, self.near_ep, self.at_ep):
                 near_locs.append(loc)
-        print("Near locs")
-        print (near_locs)        
+        #print("Near locs")
+        #print (near_locs)        
         return near_locs
 
