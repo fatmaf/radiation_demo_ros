@@ -1,0 +1,27 @@
+
+<launch>
+        
+<node pkg="monitor" type="monitor_pg_radiation_visit_req_Fpipes.py" name="monitor_pg_radiation_visit_req_Fpipes" output="screen"/>
+            
+<node pkg="monitor" type="monitor_pg_radiation_visit_req_Fipone.py" name="monitor_pg_radiation_visit_req_Fipone" output="screen"/>
+            
+<node pkg="monitor" type="monitor_pg_radiation_visit_req_Ft2bottom.py" name="monitor_pg_radiation_visit_req_Ft2bottom" output="screen"/>
+            
+<node pkg="monitor" type="monitor_pg_radiation_visit_req_Ftankset.py" name="monitor_pg_radiation_visit_req_Ftankset" output="screen"/>
+            
+<node pkg="monitor" type="monitor_pg_radiation_visit_pref_Gnotdangerred.py" name="monitor_pg_radiation_visit_pref_Gnotdangerred" output="screen"/>
+            
+<node pkg="monitor" type="monitor_pg_radiation_visit_pref_nott2bottomUipone.py" name="monitor_pg_radiation_visit_pref_nott2bottomUipone" output="screen"/>
+            
+<node pkg="monitor" type="monitor_pg_radiation_visit_pref_nottanksetUipone.py" name="monitor_pg_radiation_visit_pref_nottanksetUipone" output="screen"/>
+            
+<node pkg="monitor" type="monitor_pg_radiation_visit_pref_notpipesUipone.py" name="monitor_pg_radiation_visit_pref_notpipesUipone" output="screen"/>
+            
+<node pkg="monitor" type="monitor_pg_radiation_visit_pref_notpipesUt2bottom.py" name="monitor_pg_radiation_visit_pref_notpipesUt2bottom" output="screen"/>
+            
+<node pkg="monitor" type="monitor_pg_radiation_visit_pref_notpipesUtankset.py" name="monitor_pg_radiation_visit_pref_notpipesUtankset" output="screen"/>
+            
+<node pkg="monitor" type="monitor_pg_radiation_visit_pref_nottanksetUt2bottom.py" name="monitor_pg_radiation_visit_pref_nottanksetUt2bottom" output="screen"/>
+            
+</launch>
+        

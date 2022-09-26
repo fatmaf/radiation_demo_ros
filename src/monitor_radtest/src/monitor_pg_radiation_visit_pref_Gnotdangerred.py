@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import rospy
 import sys
 import json
@@ -13,12 +13,12 @@ ws_lock = Lock()
 dict_msgs = {}
 from std_msgs.msg import String
 
-pubat_location = rospy.Publisher(name = 'at_location', data_class = String, latch = True, queue_size = 1000)
-def callbackat_location(data):
+pubradiation_status = rospy.Publisher(name = 'radiation_status', data_class = String, latch = True, queue_size = 1000)
+def callbackradiation_status(data):
 	global ws, ws_lock
 	rospy.loginfo('monitor has observed: ' + str(data))
 	dict = message_converter.convert_ros_message_to_dictionary(data)
-	dict['topic'] = 'at_location'
+	dict['topic'] = 'radiation_status'
 	dict['time'] = rospy.get_time()
 	ws_lock.acquire()
 	while dict['time'] in dict_msgs:
@@ -27,16 +27,16 @@ def callbackat_location(data):
 	dict_msgs[dict['time']] = data
 	ws_lock.release()
 	rospy.loginfo('event propagated to oracle')
-pub_dict = { 'at_location' : pubat_location}
-msg_dict = { 'at_location' : "std_msgs/String"}
+pub_dict = { 'radiation_status' : pubradiation_status}
+msg_dict = { 'radiation_status' : "std_msgs/String"}
 def monitor():
 	global pub_error, pub_verdict
 	with open(log, 'w') as log_file:
 		log_file.write('')
-	rospy.init_node('radiation_monitor_req', anonymous=True)
-	pub_error = rospy.Publisher(name = 'radiation_monitor_req/monitor_error', data_class = MonitorError, latch = True, queue_size = 1000)
-	pub_verdict = rospy.Publisher(name = 'radiation_monitor_req/monitor_verdict', data_class = String, latch = True, queue_size = 1000)
-	rospy.Subscriber('at_location_mon', String, callbackat_location)
+	rospy.init_node('monitor_pg_radiation_visit_pref_Gnotdangerred', anonymous=True)
+	pub_error = rospy.Publisher(name = 'monitor_pg_radiation_visit_pref_Gnotdangerred/monitor_error', data_class = MonitorError, latch = True, queue_size = 1000)
+	pub_verdict = rospy.Publisher(name = 'monitor_pg_radiation_visit_pref_Gnotdangerred/monitor_verdict', data_class = String, latch = True, queue_size = 1000)
+	rospy.Subscriber('radiation_status_mon', String, callbackradiation_status)
 	rospy.loginfo('monitor started and ready')
 def on_message(ws, message):
 	global error, log, actions
@@ -96,15 +96,14 @@ def logging(json_dict):
 
 def main(argv):
 	global log, actions, ws
-	log = '/home/fatma/work/code/ros/ros1/rad_ws/monitor_resources_req_log.txt' 
-	#log = '/home/robotlab/code/ros/radiation_demo_ros/monitor_resources_req_log.txt' 
+	log = '/home/fatma/work/code/ros/ros1/rad_ws/monitor_pg_radiation_visit_pref_Gnotdangerred.txt' 
 	actions = {
-		'at_location' : ('filter', 1)
+		'radiation_status' : ('filter', 1)
 	}
 	monitor()
 	websocket.enableTrace(False)
 	ws = websocket.WebSocketApp(
-		'ws://127.0.0.1:8080',
+		'ws://127.0.0.1:8084',
 		on_message = on_message,
             
 		on_error = on_error,

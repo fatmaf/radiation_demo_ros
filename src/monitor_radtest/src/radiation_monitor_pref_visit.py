@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import rospy
 import sys
 import json
@@ -111,7 +111,8 @@ def logging(json_dict):
 
 def main(argv):
 	global log, actions, ws
-	log = '/home/robotlab/code/ros/radiation_demo_ros/monitor_resources_visit_pref_log.txt' 
+	log = '/home/fatma/work/code/ros/ros1/rad_ws/monitor_resources_visit_pref_log.txt' 
+	#log = '/home/robotlab/code/ros/radiation_demo_ros/monitor_resources_visit_pref_log.txt' 
 	actions = {
 		'radiation_status' : ('filter', 1), 
 		'at_location' : ('filter', 1)

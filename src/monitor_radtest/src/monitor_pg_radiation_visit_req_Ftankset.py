@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import rospy
 import sys
 import json
@@ -33,9 +33,9 @@ def monitor():
 	global pub_error, pub_verdict
 	with open(log, 'w') as log_file:
 		log_file.write('')
-	rospy.init_node('radiation_monitor_req', anonymous=True)
-	pub_error = rospy.Publisher(name = 'radiation_monitor_req/monitor_error', data_class = MonitorError, latch = True, queue_size = 1000)
-	pub_verdict = rospy.Publisher(name = 'radiation_monitor_req/monitor_verdict', data_class = String, latch = True, queue_size = 1000)
+	rospy.init_node('monitor_pg_radiation_visit_req_Ftankset', anonymous=True)
+	pub_error = rospy.Publisher(name = 'monitor_pg_radiation_visit_req_Ftankset/monitor_error', data_class = MonitorError, latch = True, queue_size = 1000)
+	pub_verdict = rospy.Publisher(name = 'monitor_pg_radiation_visit_req_Ftankset/monitor_verdict', data_class = String, latch = True, queue_size = 1000)
 	rospy.Subscriber('at_location_mon', String, callbackat_location)
 	rospy.loginfo('monitor started and ready')
 def on_message(ws, message):
@@ -96,15 +96,14 @@ def logging(json_dict):
 
 def main(argv):
 	global log, actions, ws
-	log = '/home/fatma/work/code/ros/ros1/rad_ws/monitor_resources_req_log.txt' 
-	#log = '/home/robotlab/code/ros/radiation_demo_ros/monitor_resources_req_log.txt' 
+	log = '/home/fatma/work/code/ros/ros1/rad_ws/monitor_pg_radiation_visit_req_Ftankset.txt' 
 	actions = {
 		'at_location' : ('filter', 1)
 	}
 	monitor()
 	websocket.enableTrace(False)
 	ws = websocket.WebSocketApp(
-		'ws://127.0.0.1:8080',
+		'ws://127.0.0.1:8083',
 		on_message = on_message,
             
 		on_error = on_error,
