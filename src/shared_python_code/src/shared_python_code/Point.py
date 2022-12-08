@@ -28,21 +28,21 @@ class CPoint(object):
         return actualdist
 
 
-LOCATIONS = {'door':CPoint(-8.18,-3.16,0.0), 'drumside': CPoint(-4.07,-7.24,0.0),
-             'drumfront':CPoint(-7.25,-5.26,0.0), 't1top': CPoint(-0.49,-3.51,0.0),
-             't1right': CPoint(2.30,-1.93,0.0), 't1bottom': CPoint(5.48,-3.48,0.0),
-             't2top': CPoint(-0.47,-6.52,0.0), 't2left': CPoint(1.98,-7.88,0.0),
-             't2bottom': CPoint(5.36,-6.31,0.0), 'tankset': CPoint(6.80,-5.69,0.0),
+LOCATIONS = {'door':CPoint(-8.18,-3.16,0.0), 'drumpipes': CPoint(-4.07,-7.24,0.0),
+             'drum':CPoint(-7.25,-5.26,0.0), 'tank1face': CPoint(-0.49,-3.51,0.0),
+             'tank1': CPoint(2.30,-1.93,0.0), 'tank1pipe': CPoint(5.48,-3.48,0.0),
+             'tank2face': CPoint(-0.47,-6.52,0.0), 'tank2': CPoint(1.98,-7.88,0.0),
+             'tank2pipe': CPoint(5.36,-6.31,0.0), 'tankset': CPoint(6.80,-5.69,0.0),
              'pipes': CPoint(7.79,-2.67,0.0), 'room': CPoint(1.30,2.20,0.0),
              'stairs': CPoint(2.94,8.56,0.0),
-             'entrance':CPoint(-7.825369834899902, -0.5725803375244141, 0.02588939666748047),
+             'foyer':CPoint(-7.825369834899902, -0.5725803375244141, 0.02588939666748047),
              'roomwall':CPoint(-0.5568475723266602, 0.515995979309082, 0.00116729736328125),
-             'roomentrance':CPoint(4.197497367858887, 0.3372831344604492, 0.004076957702636719),
+             'roomdoor':CPoint(4.197497367858887, 0.3372831344604492, 0.004076957702636719),
              'roomback':CPoint(4.948063850402832, 4.055242538452148, 0.0),
-             'ipone':CPoint(  -2.1981678009033203, -4.938733100891113, 0.0),
-             'iptwo':CPoint( -5.969668388366699, 3.861062526702881, 0.0),
+             'tankzone':CPoint(  -2.1981678009033203, -4.938733100891113, 0.0),
+             'freezone':CPoint( -5.969668388366699, 3.861062526702881, 0.0),
              'farwall':CPoint( 7.745523452758789,3.8347959518432617,0.0),
-             'ipthree':CPoint(1.8702278137207031,-0.5160531997680664,0.0)
+             'corridor':CPoint(1.8702278137207031,-0.5160531997680664,0.0)
              }
 
 #cuz I dont want to have to do this again and again 
