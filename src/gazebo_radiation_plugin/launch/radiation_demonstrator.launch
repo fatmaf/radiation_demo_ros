@@ -130,7 +130,10 @@
   <include file="$(find gazebo_radiation_plugins)/launch/radmap.launch" />
 
   <!-- python gwendolen movebase scripts -->
-  <node name="movebase_client_py" output="screen" pkg="simple_navigation_goals" type="simple_navigation_goals.py" />
+  <!-- <node name="movebase_client_py" output="screen" pkg="simple_navigation_goals" type="simple_navigation_goals.py" /> -->
+  <node name="gwendolen_to_ros_movebase_client_py" output="screen" pkg="navigation_playground" type="gwendolen_to_ros_movebase_client.py"/>
+  <node name="display_locations_py" output="screen" pkg="navigation_playground" type="display_locations.py"/>
+  <node name="pub_current_pose_py" output="screen" pkg="navigation_playground" type="pub_current_pose.py"/>
 
   <!-- Run RVIZ -->
   <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find gazebo_radiation_plugins)launch/rviz_config/husky_radiation_mapping.rviz"/>
